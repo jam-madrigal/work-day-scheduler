@@ -144,6 +144,23 @@
         localStorage.setItem("Text5", fiveText);
       })
 
+// Function that re-renders the textarea based on key/value pairs saved by the user; would like to consolidate all of this and the above functions, but hey, it works for now
+      function showText(){
+
+      $("#9").text(localStorage.getItem("Text9"));
+      $("#10").text(localStorage.getItem("Text10"));
+      $("#11").text(localStorage.getItem("Text11"));
+      $("#12").text(localStorage.getItem("Text12"));
+      $("#1").text(localStorage.getItem("Text1"));
+      $("#2").text(localStorage.getItem("Text2"));
+      $("#3").text(localStorage.getItem("Text3"));
+      $("#4").text(localStorage.getItem("Text4"));
+      $("#5").text(localStorage.getItem("Text5"));
+
+    }
+
+    showText();
+
       </script>
   </body>
 </html>
