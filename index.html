@@ -25,7 +25,8 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p class="lead">A simple calendar app for scheduling your work day <br><br>(Remember to save your changes!)</p>
+      
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
@@ -161,7 +162,6 @@
     function setClass(){
       // 9 AM
       var nineHour = moment().get('hour')
-      parseInt(nineHour);
 
       if (nineHour === 9){
       $("#9").toggleClass("present");
@@ -177,7 +177,6 @@
 
       // 10 AM
       var tenHour = moment().get('hour')
-      parseInt(tenHour);
 
       if (tenHour === 10){
       $("#10").toggleClass("present");
@@ -193,7 +192,6 @@
 
       //  11 AM
       var elevenHour = moment().get('hour')
-      parseInt(elevenHour);
 
       if (elevenHour === 11){
       $("#11").toggleClass("present");
@@ -209,7 +207,6 @@
 
       // 12 PM
       var twelveHour = moment().get('hour')
-      parseInt(twelveHour);
 
       if (twelveHour === 12){
       $("#12").toggleClass("present");
@@ -225,7 +222,6 @@
 
       // 1 PM
       var oneHour = moment().get('hour')
-      parseInt(oneHour);
 
       if (oneHour === 13){
       $("#1").toggleClass("present");
@@ -241,7 +237,6 @@
 
       // 2 PM
       var twoHour = moment().get('hour')
-      parseInt(twoHour);
 
       if (twoHour === 14){
       $("#2").toggleClass("present");
@@ -257,7 +252,6 @@
 
       // 3 PM
       var threeHour = moment().get('hour')
-      parseInt(threeHour);
 
       if (threeHour === 15){
       $("#3").toggleClass("present");
@@ -273,7 +267,6 @@
 
       // 4 PM
       var fourHour = moment().get('hour')
-      parseInt(fourHour);
 
       if (fourHour === 16){
       $("#4").toggleClass("present");
@@ -289,7 +282,6 @@
 
       // 5 PM
       var fiveHour = moment().get('hour')
-      parseInt(fiveHour);
 
       if (fiveHour === 17){
       $("#5").toggleClass("present");
