@@ -32,55 +32,55 @@
       <!-- Timeblocks go here -->
         <div class="time-block">
           <div>9:00 AM</div>
-          <textarea id=9> </textarea>
+          <textarea id="9"> </textarea>
           <button type="button" class="btn btn-primary" id="9btn">Save</button>
         </div>
         
         <div class="time-block"> 
           <div>10:00 AM</div>
-          <textarea id=10> </textarea>
+          <textarea id="10"> </textarea>
           <button type="button" class="btn btn-primary" id="10btn">Save</button>
         </div>
 
         <div class="time-block"> 
           <div>11:00 AM</div>
-          <textarea id=11> </textarea>
+          <textarea id="11"> </textarea>
           <button type="button" class="btn btn-primary" id="11btn">Save</button>
         </div>
 
         <div class="time-block"> 
           <div>12:00 PM</div>
-          <textarea id=12> </textarea>
+          <textarea id="12"> </textarea>
           <button type="button" class="btn btn-primary" id="12btn">Save</button>
         </div>
 
         <div class="time-block"> 
           <div>1:00 PM</div>
-          <textarea id=1> </textarea>
+          <textarea id="1"> </textarea>
           <button type="button" class="btn btn-primary" id="1btn">Save</button>
         </div>
 
         <div class="time-block">
           <div>2:00 PM</div> 
-          <textarea id=2> </textarea>
+          <textarea id="2"> </textarea>
           <button type="button" class="btn btn-primary" id="2btn">Save</button>
         </div>
 
         <div class="time-block"> 
           <div>3:00 PM</div>
-          <textarea id=3> </textarea>
+          <textarea id="3"> </textarea>
           <button type="button" class="btn btn-primary" id="3btn">Save</button>
         </div>
         
         <div class="time-block"> 
           <div>4:00 PM</div>
-          <textarea id=4> </textarea>
+          <textarea id="4"> </textarea>
           <button type="button" class="btn btn-primary" id="4btn">Save</button>
         </div>
 
         <div class="time-block"> 
           <div>5:00 PM</div>
-          <textarea id=5> </textarea>
+          <textarea id="5"> </textarea>
           <button type="button" class="btn btn-primary" id="5btn">Save</button>
         </div>
         
@@ -93,7 +93,7 @@
         
     <!-- Where all the jquery code will go -->
     <script>
-      // Fetch the current date and time and display it in the header
+      // Fetch the current date and time with moment.js and display it in the header
       var theDate = moment();
       $("#currentDay").text(theDate);
 
@@ -144,9 +144,8 @@
         localStorage.setItem("Text5", fiveText);
       })
 
-// Function that re-renders the textarea based on key/value pairs saved by the user; would like to consolidate all of this and the above functions, but hey, it works for now
-      function showText(){
-
+  // Function that re-renders the textarea based on key/value pairs saved by the user; would like to consolidate all of this and the above functions, but hey, it works for now
+    function showText(){
       $("#9").text(localStorage.getItem("Text9"));
       $("#10").text(localStorage.getItem("Text10"));
       $("#11").text(localStorage.getItem("Text11"));
@@ -158,7 +157,155 @@
       $("#5").text(localStorage.getItem("Text5"));
 
     }
+    // These function will toggleClass of each text area id based on the current hour of the day, and run alongside showText(); on loading
+    function setClass(){
+      // 9 AM
+      var nineHour = moment().get('hour')
+      parseInt(nineHour);
 
+      if (nineHour === 9){
+      $("#9").toggleClass("present");
+      }
+
+      if (nineHour < 9) {
+        $("#9").toggleClass("future");
+      }
+
+      if (nineHour > 9) {
+        $("#9").toggleClass("past");
+      }
+
+      // 10 AM
+      var tenHour = moment().get('hour')
+      parseInt(tenHour);
+
+      if (tenHour === 10){
+      $("#10").toggleClass("present");
+      }
+
+      if (tenHour < 10) {
+        $("#9").toggleClass("future");
+      }
+
+      if (tenHour > 10) {
+        $("#10").toggleClass("past");
+      }
+
+      //  11 AM
+      var elevenHour = moment().get('hour')
+      parseInt(elevenHour);
+
+      if (elevenHour === 11){
+      $("#11").toggleClass("present");
+      }
+
+      if (elevenHour < 11) {
+        $("#11").toggleClass("future");
+      }
+
+      if (elevenHour > 11) {
+        $("#11").toggleClass("past");
+      }
+
+      // 12 PM
+      var twelveHour = moment().get('hour')
+      parseInt(twelveHour);
+
+      if (twelveHour === 12){
+      $("#12").toggleClass("present");
+      }
+
+      if (twelveHour < 12) {
+        $("#12").toggleClass("future");
+      }
+
+      if (twelveHour > 12) {
+        $("#12").toggleClass("past");
+      }
+
+      // 1 PM
+      var oneHour = moment().get('hour')
+      parseInt(oneHour);
+
+      if (oneHour === 13){
+      $("#1").toggleClass("present");
+      }
+
+      if (oneHour < 13) {
+        $("#1").toggleClass("future");
+      }
+
+      if (oneHour > 13) {
+        $("#1").toggleClass("past");
+      }
+
+      // 2 PM
+      var twoHour = moment().get('hour')
+      parseInt(twoHour);
+
+      if (twoHour === 14){
+      $("#2").toggleClass("present");
+      }
+
+      if (twoHour < 14) {
+        $("#2").toggleClass("future");
+      }
+
+      if (twoHour > 14) {
+        $("#2").toggleClass("past");
+      }
+
+      // 3 PM
+      var tenHour = moment().get('hour')
+      parseInt(tenHour);
+
+      if (nineHour === 10){
+      $("#9").toggleClass("present");
+      }
+
+      if (nineHour < 9) {
+        $("#9").toggleClass("future");
+      }
+
+      if (nineHour > 9) {
+        $("#9").toggleClass("past");
+      }
+
+      // 4 PM
+      var tenHour = moment().get('hour')
+      parseInt(tenHour);
+
+      if (nineHour === 10){
+      $("#9").toggleClass("present");
+      }
+
+      if (nineHour < 9) {
+        $("#9").toggleClass("future");
+      }
+
+      if (nineHour > 9) {
+        $("#9").toggleClass("past");
+      }
+
+      // 5 PM
+      var tenHour = moment().get('hour')
+      parseInt(tenHour);
+
+      if (nineHour === 10){
+      $("#9").toggleClass("present");
+      }
+
+      if (nineHour < 9) {
+        $("#9").toggleClass("future");
+      }
+
+      if (nineHour > 9) {
+        $("#9").toggleClass("past");
+      }
+
+    }
+
+    setClass();
     showText();
 
       </script>
