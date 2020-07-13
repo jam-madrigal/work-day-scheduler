@@ -1,11 +1,14 @@
 # Work Day Scheduler
 This app will help you plan a 9-5 workday. 
+![image](https://user-images.githubusercontent.com/65047802/87344072-a958d880-c502-11ea-905f-bbf41b89d5c0.png)
 ---
 ## Features
 - Display the current date and time 
 - Select an hour of the day and add plans/notes via keyboard input 
 - Save your plans on an hourly basis
 - See which hours of the day are still incomplete
+
+
 ---
 ### To get started
 1. Have moment.js append the current time and date to the header
